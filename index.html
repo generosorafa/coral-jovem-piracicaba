@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Repertorio online do Coral Jovem de Piracicaba, com letras, links de ensaio e midias.">
+    <meta name="theme-color" content="#17453b">
+    <title>Coral Jovem de Piracicaba | Repertorio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#apresentacao" aria-label="Coral Jovem de Piracicaba">
+        <span class="brand-mark" aria-hidden="true">CJP</span>
+        <span>
+          <strong>Coral Jovem de Piracicaba</strong>
+          <small>Repertorio de ensaio</small>
+        </span>
+      </a>
+
+      <label class="search-shell" for="globalSearch">
+        <span aria-hidden="true">⌕</span>
+        <input id="globalSearch" type="search" placeholder="Buscar musica, tom ou categoria">
+      </label>
+    </header>
+
+    <div class="site-shell">
+      <aside class="sidebar" aria-label="Navegacao principal">
+        <nav>
+          <p class="nav-title">Coral</p>
+          <a href="#apresentacao">Apresentacao</a>
+          <a href="#repertorio">Musicas</a>
+          <a href="#ensaios">Ensaios</a>
+          <a href="#orientacoes">Orientacoes</a>
+        </nav>
+
+        <nav class="song-nav" aria-label="Musicas do repertorio">
+          <p class="nav-title">Repertorio</p>
+          <div id="sidebarSongs" class="sidebar-songs"></div>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section id="apresentacao" class="hero-section">
+          <div class="hero-copy">
+            <p class="eyebrow">Area dos coralistas</p>
+            <h1>Repertorio do Coral Jovem de Piracicaba.</h1>
+            <p>
+              Uma pagina simples para organizar as musicas que o coral vai cantar,
+              com letra, tom, andamento e acessos rapidos para ouvir a versao cantada,
+              o playback e o Spotify.
+            </p>
+          </div>
+          <img class="hero-image" src="assets/hero-choir.jpg" alt="Pastas de partitura e microfones em uma sala de ensaio de coral.">
+        </section>
+
+        <section id="repertorio" class="repertoire-section" aria-labelledby="repertoireTitle">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Musicas</p>
+              <h2 id="repertoireTitle">Repertorio atual</h2>
+            </div>
+            <div class="filters" aria-label="Filtros de repertorio">
+              <label>
+                Categoria
+                <select id="categoryFilter">
+                  <option value="all">Todas</option>
+                </select>
+              </label>
+              <label>
+                Status
+                <select id="statusFilter">
+                  <option value="all">Todos</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="repertoire-grid">
+            <div class="song-list-panel">
+              <div class="list-header">
+                <strong id="songCount">0 musicas</strong>
+                <span id="selectedHint">Selecione uma musica</span>
+              </div>
+              <div id="songList" class="song-list" aria-label="Lista de musicas"></div>
+            </div>
+
+            <article id="songDetail" class="song-detail" aria-live="polite"></article>
+          </div>
+        </section>
+
+        <section id="ensaios" class="simple-section" aria-labelledby="practiceTitle">
+          <p class="eyebrow">Agenda</p>
+          <h2 id="practiceTitle">Proximos ensaios</h2>
+          <div class="timeline">
+            <article>
+              <time datetime="2026-07-04">04 jul</time>
+              <div>
+                <h3>Leitura de vozes</h3>
+                <p>Foco em entradas, cortes e equilibrio entre naipes.</p>
+              </div>
+            </article>
+            <article>
+              <time datetime="2026-07-11">11 jul</time>
+              <div>
+                <h3>Ensaio com playback</h3>
+                <p>Passagem corrida do repertorio e ajustes de andamento.</p>
+              </div>
+            </article>
+            <article>
+              <time datetime="2026-07-18">18 jul</time>
+              <div>
+                <h3>Simulacao da apresentacao</h3>
+                <p>Ordem final das musicas, dinamica e posicionamento.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="orientacoes" class="simple-section" aria-labelledby="notesTitle">
+          <p class="eyebrow">Notas</p>
+          <h2 id="notesTitle">Orientacoes do regente</h2>
+          <div class="note-grid">
+            <article>
+              <h3>Chegada</h3>
+              <p>Chegar 20 minutos antes para aquecimento e conferencia de material.</p>
+            </article>
+            <article>
+              <h3>Material</h3>
+              <p>Levar pasta, agua e as letras impressas quando indicado no ensaio.</p>
+            </article>
+            <article>
+              <h3>Escuta</h3>
+              <p>Ouvir primeiro a versao cantada e depois repetir com o playback.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
